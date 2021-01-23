@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(MoveRigidbodyPosition))]
+[RequireComponent(typeof(SetRigidbodyRotation))]
 public class PlayerMotion : MonoBehaviour
 {
     /// Inspector
     [SerializeField] private string axisName = "Horizontal";
-    [SerializeField] private float speed = 10f;
 
     /// Dependencies
-    private Rigidbody _rigidbody;
+    private MoveRigidbodyPosition moveRigidbodyPosition;
+    private SetRigidbodyRotation setRigidbodyRotation;
     private Engine engine;
 
     /// Internal
@@ -16,7 +17,8 @@ public class PlayerMotion : MonoBehaviour
 
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody>();
+        moveRigidbodyPosition = GetComponent<MoveRigidbodyPosition>();
+        setRigidbodyRotation = GetComponent<SetRigidbodyRotation>();
         engine = GetComponentInChildren<Engine>();
     }
 
@@ -40,10 +42,9 @@ public class PlayerMotion : MonoBehaviour
 
     private void Move()
     {
-        _rigidbody.position += Vector3.right * horizontalInput * speed * Time.deltaTime;
+        moveRigidbodyPosition.Move(Vector3.right * horizontalInput);
 
-        float rotation = -10f * horizontalInput;
-        _rigidbody.rotation = Quaternion.Euler(0f, rotation, 0f);
+        setRigidbodyRotation.Set(new Vector3(0f, -horizontalInput * 10f, 0f));
     }    
 
 }

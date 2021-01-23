@@ -1,20 +1,16 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(MoveRigidbodyPosition))]
 public class EnemyMotion : MonoBehaviour
 {
 
-    /// Inspector
-    [SerializeField]
-    private float speed = -5f;
-
     /// Dependencies
-    private Rigidbody _rigidbody;
+    private MoveRigidbodyPosition moveRigidbodyPosition;
     private Engine engine;
 
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody>();
+        moveRigidbodyPosition = GetComponent<MoveRigidbodyPosition>();
         engine = GetComponentInChildren<Engine>();
     }
 
@@ -33,7 +29,7 @@ public class EnemyMotion : MonoBehaviour
 
     private void Move()
     {
-        _rigidbody.position += Vector3.up * speed * Time.deltaTime;
+        moveRigidbodyPosition.Move(Vector3.down);
     }
 
 }
