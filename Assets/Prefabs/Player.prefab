@@ -91,8 +91,8 @@ GameObject:
   m_Component:
   - component: {fileID: 439242}
   - component: {fileID: 6863179646917086079}
-  - component: {fileID: 7150926627230812859}
-  - component: {fileID: 6957008333001025452}
+  - component: {fileID: 884203074148085339}
+  - component: {fileID: 5607398941669324003}
   - component: {fileID: 9132587528608641076}
   - component: {fileID: 812378319132731559}
   m_Layer: 8
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axisName: Horizontal
---- !u!114 &7150926627230812859
+--- !u!114 &884203074148085339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,11 +141,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 110440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1322d28bcbe8e844db33ff92930c7b76, type: 3}
+  m_Script: {fileID: 11500000, guid: c2d3b1fb60b7a98458c480812ffa673c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!114 &6957008333001025452
+--- !u!114 &5607398941669324003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,9 +154,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 110440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7123f97a1870b440a717859bd264d20, type: 3}
+  m_Script: {fileID: 11500000, guid: 95a53a323897f534d87b3702823b72be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
 --- !u!135 &9132587528608641076
 SphereCollider:
   m_ObjectHideFlags: 0

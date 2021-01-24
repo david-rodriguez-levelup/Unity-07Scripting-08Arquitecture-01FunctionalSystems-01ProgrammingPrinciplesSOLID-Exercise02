@@ -17,4 +17,5 @@ public class ConeLauncher : BaseLauncher
         var projectile2 = Instantiate(base.projectilePrefab, transform.position + Vector3.right, transform.rotation);
         projectile2.AddForce(projectile2.transform.up * base.fireForce);
     }
+
 }

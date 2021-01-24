@@ -24,13 +24,13 @@ public class Engine : MonoBehaviour
         flare.SetActive(false);
     }
 
-    public void Idle()
+    public void Rest()
     {
         core.SetActive(false);
         flare.SetActive(enabled && true);
     }
 
-    public void Move()
+    public void Ignite()
     {
         core.SetActive(enabled && true);
         flare.SetActive(enabled && true);

@@ -91,8 +91,8 @@ GameObject:
   m_Component:
   - component: {fileID: 432640}
   - component: {fileID: 342612717072699229}
-  - component: {fileID: 3004293914571974161}
-  - component: {fileID: 75394207118526230}
+  - component: {fileID: 8239439645266900159}
+  - component: {fileID: 2088763984801315247}
   - component: {fileID: 5642563894138725913}
   - component: {fileID: 8826228217712027461}
   - component: {fileID: 3173040048564773064}
@@ -131,20 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ba77d68ba484f49b796a9e4d8aa6e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3004293914571974161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1322d28bcbe8e844db33ff92930c7b76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   speed: 10
---- !u!114 &75394207118526230
+--- !u!114 &8239439645266900159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,13 +141,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 178266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2248e7f1a96c3e4cb654fd808c90f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: c2d3b1fb60b7a98458c480812ffa673c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2088763984801315247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57d233f0fc11d9849894c7416b2d4455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyOn: 0
   layerMask:
     serializedVersion: 2
-    m_Bits: 1280
-  type: 0
+    m_Bits: 4096
 --- !u!114 &5642563894138725913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,10 +172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d233f0fc11d9849894c7416b2d4455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOn: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 4096
-  type: 0
+    m_Bits: 1280
 --- !u!65 &8826228217712027461
 BoxCollider:
   m_ObjectHideFlags: 0
