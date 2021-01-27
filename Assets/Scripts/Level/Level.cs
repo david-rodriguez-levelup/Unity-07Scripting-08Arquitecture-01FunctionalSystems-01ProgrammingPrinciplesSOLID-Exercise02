@@ -8,6 +8,7 @@ public class Level : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private float timeBetweenEnemies;
 
+    /// Dependencies
     private LevelEnemySpawner levelTopEnemySpawner;
 
     private void Awake()

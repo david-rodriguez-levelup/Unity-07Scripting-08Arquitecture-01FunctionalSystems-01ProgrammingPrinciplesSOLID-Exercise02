@@ -7,7 +7,7 @@ public class PositionSupport : MonoBehaviour
 
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>(); // Could be null.
     }
 
     public void Move(Vector3 direction, float speed)
@@ -23,6 +23,7 @@ public class PositionSupport : MonoBehaviour
             }
             else
             {
+                // TODO: Set/Unset kinematic?
                 // Move non-kinematic rigidbody.
                 _rigidbody.position += movement;
             }
@@ -33,11 +34,17 @@ public class PositionSupport : MonoBehaviour
         }
     }
 
-    /*
     public void Set(Vector3 position)
     {
-        // TODO!
+        if (_rigidbody != null)
+        {
+            // TODO: Set/Unset kinematic?
+            _rigidbody.position = position;
+        }
+        else
+        {
+            transform.position = position;
+        }
     }
-    */
 
 }

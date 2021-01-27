@@ -93,12 +93,12 @@ GameObject:
   - component: {fileID: 342612717072699229}
   - component: {fileID: 8239439645266900159}
   - component: {fileID: 2088763984801315247}
-  - component: {fileID: 5642563894138725913}
+  - component: {fileID: 2852375939127216038}
   - component: {fileID: 8826228217712027461}
   - component: {fileID: 3173040048564773064}
   m_Layer: 9
   m_Name: Enemy1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ba77d68ba484f49b796a9e4d8aa6e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
 --- !u!114 &8239439645266900159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 4096
---- !u!114 &5642563894138725913
+--- !u!114 &2852375939127216038
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,10 +169,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 178266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57d233f0fc11d9849894c7416b2d4455, type: 3}
+  m_Script: {fileID: 11500000, guid: f16bfd03a1d4515469e307a9695b410d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyOn: 1
+  destroyOn: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 1280

@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour
 
     /// Inspector
     [SerializeField] private string fireButton = "Fire1";
+    [SerializeField] protected Rigidbody projectilePrefab;
     [SerializeField] private ILauncher launcher;
 
     private void Awake()
@@ -25,7 +26,7 @@ public class Weapon : MonoBehaviour
     {
         if (launcher.CanShoot())
         {
-            launcher.Shoot();
+            launcher.Shoot(projectilePrefab);
         }
     }
 

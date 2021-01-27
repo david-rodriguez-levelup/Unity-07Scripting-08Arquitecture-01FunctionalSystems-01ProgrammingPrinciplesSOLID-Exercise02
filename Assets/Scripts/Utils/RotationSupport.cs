@@ -24,6 +24,18 @@ public class RotationSupport : MonoBehaviour
         }
     }
 
+    public void Set(Quaternion rotation)
+    {
+        if (_rigidbody)
+        {
+            _rigidbody.rotation = rotation;
+        }
+        else
+        {
+            transform.rotation = rotation;
+        }
+    }
+
     public void Set(Vector3 eulerRotation)
     {
         if (_rigidbody)
