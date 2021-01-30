@@ -11,7 +11,10 @@ public class PositionSupport : MonoBehaviour
     }
 
     public void Move(Vector3 direction, float speed)
-    {       
+    {
+
+        // Check Time.inFixedTimeStep!!! -> WARNING!!!
+
         Vector3 movement = direction * speed * Time.deltaTime;
 
         if (_rigidbody != null)

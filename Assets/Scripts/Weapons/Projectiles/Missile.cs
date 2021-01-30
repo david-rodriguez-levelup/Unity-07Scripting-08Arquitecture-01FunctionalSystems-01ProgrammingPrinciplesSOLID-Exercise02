@@ -23,14 +23,21 @@ public class Missile : MonoBehaviour
         rotationSupport = GetComponent<RotationSupport>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (target != null) 
         {
+            /*
             Quaternion targetRotation = Quaternion.LookRotation(target.transform.position - transform.position);
             rotationSupport.Set(Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime));
             positionSupport.Set(transform.position + transform.up * speed * Time.deltaTime);
-        }
+            */
+            Vector3 toTarget = target.position - transform.position;
+            float angle = Mathf.Atan2(toTarget.y, toTarget.x) * Mathf.Rad2Deg - 90f;
+            Quaternion quaternion = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = Quaternion.Slerp(transform.rotation, quaternion, speed * Time.deltaTime);
+            positionSupport.Set(transform.position + transform.up * speed * Time.deltaTime);
+        }        
         else
         {
             FindTarget();
@@ -39,7 +46,7 @@ public class Missile : MonoBehaviour
 
     public void FindTarget()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, 5f, targetLayerMask);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 10f, targetLayerMask);
         if (colliders.Length > 0)
         {
             float nearestDistance = float.MaxValue;
